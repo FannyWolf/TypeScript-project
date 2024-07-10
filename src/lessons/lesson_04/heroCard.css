@@ -1,0 +1,33 @@
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.card.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.card.light {
+  background-color: #fff;
+  color: #000;
+}
+
+.card img {
+  border-radius: 10px;
+}
+
+.card .lightsaber-color {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  margin-left: 5px;
+  border-radius: 50%;
+}
+  
