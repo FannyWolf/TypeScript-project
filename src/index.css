@@ -19,3 +19,7 @@ code {
   align-items: center;
   width: 70%;
 }
+
+.lesson-container > p {
+  text-align: center;
+}

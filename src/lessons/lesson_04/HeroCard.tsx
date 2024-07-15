@@ -1,10 +1,21 @@
 import React from 'react';
-import "./heroCard.css";
+import styles from "./heroCard.module.css";
 
-const HeroCard = ({ hero }) => {
-  
+interface Hero {
+  name: string;
+  age: number;
+  isDark: boolean;
+  lightsaberColors: string[];
+  image: string;
+}
+
+interface IHeroCardProps {
+  hero: Hero;
+}
+
+const HeroCard = ({ hero }: IHeroCardProps) => {
   return (
-    <div className={`card ${hero.isDark ? "dark" : "light"}`}>
+    <div className={`${styles.card} ${hero.isDark ? styles.dark : styles.light}`}>
       <h4>{hero.name}</h4>
       <p>Age: {hero.age}</p>
       <img width={200} src={hero.image} alt={hero.name} />
@@ -13,7 +24,7 @@ const HeroCard = ({ hero }) => {
         {hero.lightsaberColors.map((color, colorIndex) => (
           <span
             key={colorIndex}
-            className="lightsaber-color"
+            className={styles.lightsaberColor}
             style={{ backgroundColor: color }}
           ></span>
         ))}
@@ -23,5 +34,4 @@ const HeroCard = ({ hero }) => {
 };
 
 export default HeroCard;
-
 

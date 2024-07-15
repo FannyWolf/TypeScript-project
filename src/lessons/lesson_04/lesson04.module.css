@@ -1,0 +1,11 @@
+/* src/components/lesson04.module.css */
+.lessonContainer {
+  display: flex;
+  flex-direction: column; 
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px; 
+}

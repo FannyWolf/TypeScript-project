@@ -4,11 +4,11 @@ function Counter() {
   // явно указываем тип для значения в useState
   const [count, setCount] = useState<number>(0);
 
-  const handlePlus = () => {
+  const handlePlus = (): void => {
     setCount(prev => prev + 1);
   };
 
-  const handleMinus = () => {
+  const handleMinus = (): void => {
     setCount(prev => prev - 1);
   };
 
@@ -26,3 +26,4 @@ function Counter() {
 }
 
 export default Counter;
+

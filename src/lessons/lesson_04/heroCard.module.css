@@ -7,6 +7,9 @@
   width: 250px;
   text-align: center;
   transition: background-color 0.3s ease;
+ /* display: flex;
+  flex-direction: column;
+  justify-content: space-between;*/
 }
 
 .card.dark {
@@ -30,4 +33,13 @@
   margin-left: 5px;
   border-radius: 50%;
 }
+
+.lightsaberColor {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  margin-left: 5px;
+  border-radius: 50%;
+}
+
   
