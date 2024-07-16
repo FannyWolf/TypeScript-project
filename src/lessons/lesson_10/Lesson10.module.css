@@ -1,0 +1,15 @@
+.factBlock {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 700px;
+    overflow-y: auto; 
+    width: 800px;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+  
+  .factItem {
+    margin: 10px 0;
+  }
+  
