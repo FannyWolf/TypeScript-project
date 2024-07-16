@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/TypeScript-project/static/css/main.efac6444.css",
-    "main.js": "/TypeScript-project/static/js/main.3adbc11b.js",
+    "main.css": "/TypeScript-project/static/css/main.a2c859d4.css",
+    "main.js": "/TypeScript-project/static/js/main.337d2586.js",
     "index.html": "/TypeScript-project/index.html",
-    "main.efac6444.css.map": "/TypeScript-project/static/css/main.efac6444.css.map",
-    "main.3adbc11b.js.map": "/TypeScript-project/static/js/main.3adbc11b.js.map"
+    "main.a2c859d4.css.map": "/TypeScript-project/static/css/main.a2c859d4.css.map",
+    "main.337d2586.js.map": "/TypeScript-project/static/js/main.337d2586.js.map"
   },
   "entrypoints": [
-    "static/css/main.efac6444.css",
-    "static/js/main.3adbc11b.js"
+    "static/css/main.a2c859d4.css",
+    "static/js/main.337d2586.js"
   ]
 }
