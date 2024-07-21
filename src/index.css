@@ -23,3 +23,10 @@ code {
 .lesson-container > p {
   text-align: center;
 }
+
+.lesson-container {margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%
+  }

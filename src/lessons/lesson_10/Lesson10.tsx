@@ -3,7 +3,7 @@ import Spinner from './Spinner';
 import styles from './Lesson10.module.css'; 
 import MyButton from '../../components/myButton/MyButton';
 
-const Lesson10: React.FC = () => {
+const Lesson10 = () => {
   const [facts, setFacts] = useState<string[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
 

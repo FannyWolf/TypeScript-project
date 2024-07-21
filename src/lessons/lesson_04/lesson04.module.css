@@ -8,3 +8,10 @@
   padding: 20px;
   width: 100%;
 }
+
+.forceUsersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  width: 100%;
+  gap: 10px;
+}

@@ -18,12 +18,13 @@
 }
 
 .card.light {
-  background-color: #fff;
+  background-color: #ebede0;
   color: #000;
 }
 
 .card img {
   border-radius: 10px;
+  height: 220px;
 }
 
 .card .lightsaber-color {

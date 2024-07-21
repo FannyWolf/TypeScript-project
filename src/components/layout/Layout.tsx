@@ -1,19 +1,17 @@
-import styles from './layout.module.css'
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
+import styles from './layout.module.css';
 
-function Layout() {
+export default function Layout() {
   return (
     <div className={styles.page}>
-      <header className={styles.header}>
-        header
-      </header>
+      <Header />
       <main className={styles.main}>
-        
+        <Outlet/>
       </main>
-      <footer className={styles.footer}>
-        footer
-      </footer>
+      <Footer />
     </div>
   );
 }
-
-export default Layout;
