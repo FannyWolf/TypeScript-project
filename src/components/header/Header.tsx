@@ -1,31 +1,21 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import styles from './header.module.css';
 
-const links = [
-  { to: '/', label: 'HomePage' },
-  { to: '/star-wars-gallery', label: 'Star Wars Gallery' },
-  { to: '/gender-form', label: 'Gender Form' },
-  { to: '/robot-form', label: 'Robot Form' },
-  { to: '/my-form', label: 'Form Example' },
-  { to: '/counter', label: 'Counter' },
-  { to: '/feedback', label: 'Feedback' },
-];
+import styles from './header.module.css'
+import { Link, useLocation } from 'react-router-dom'
+import {links} from './links'
 
 export default function Header() {
-  const location = useLocation();
-
+  
+  const location = useLocation()
+  // console.log(links);
+  
+  
   return (
+    <>
     <header className={styles.header}>
-      {links.map(link => (
-        <Link
-          key={link.to}
-          className={location.pathname === link.to ? styles.active : ''}
-          to={link.to}
-        >
-          {link.label}
-        </Link>
+      {links.map((el, index) => (
+        <Link key={index} className={location.pathname === el.pathname ? styles.active : ''} to={el.pathname}>{el.title}</Link>
       ))}
     </header>
-  );
+    </>
+  )
 }
