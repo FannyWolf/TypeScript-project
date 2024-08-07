@@ -1,21 +1,49 @@
+import { Link, useLocation } from 'react-router-dom';
+import styles from './header.module.css';
+import { links } from './links';
+import { logoutUser } from '../../features/auth/authSlice';
+import { useAppDispatch, useAppSelector } from '../redax/hooks';
+import { cleanProducts } from '../../features/products/productSlice';
 
-import styles from './header.module.css'
-import { Link, useLocation } from 'react-router-dom'
-import {links} from './links'
+
 
 export default function Header() {
-  
-  const location = useLocation()
-  // console.log(links);
-  
-  
+  // забираем данные по user
+  const { user } = useAppSelector(state => state.user);
+
+  const dispatch = useAppDispatch()
+  const location = useLocation();
+
+  const handleLogout = () => {
+    // чистим браузерное хранилище данных
+    localStorage.removeItem('user-token')
+
+    // чистим state, 'выносим мусор' данных за пользователем
+    dispatch(logoutUser())
+
+    // чистим продукты
+    dispatch(cleanProducts())
+  }
+
   return (
-    <>
     <header className={styles.header}>
-      {links.map((el, index) => (
-        <Link key={index} className={location.pathname === el.pathname ? styles.active : ''} to={el.pathname}>{el.title}</Link>
-      ))}
+      {user.username && <span>{user.username}</span>}
+      {/* через тернарный оператор проверяем наличие данных по user и показываем или login или интерфейс для авторизированного юзера */}
+      {user.username ? (
+        <>
+          {links.map((el, index) => (
+            <Link
+              key={index}
+              className={location.pathname === el.pathname ? styles.active : ''}
+              to={el.pathname}>{el.title}</Link>
+          ))}
+          <Link onClick={handleLogout} to='/login'>logout</Link>
+        </>
+      ) : (
+        <Link to='/login'>Login</Link>
+      )}
+
     </header>
-    </>
-  )
+  );
 }
+

@@ -4,6 +4,9 @@
   "private": true,
   "homepage": "https://fannywolf.github.io/TypeScript-project/",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.1",
+    "axios": "^1.6.0",
+    "react-redux": "^8.0.1",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

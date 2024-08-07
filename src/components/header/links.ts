@@ -5,12 +5,7 @@ interface ILinks {
 export const links: ILinks [] = [
     {
         pathname: '/',
-        title: '🏡'
-    },
-
-    {
-        pathname: '/star-wars-gallery',
-        title: 'star wars'
+        title: ' 🏡 home star wars'
     },
 
     {
@@ -29,22 +24,8 @@ export const links: ILinks [] = [
     },
     
     {
-        pathname: '/feedback',
-        title: 'feedback'
-    },
-
-    {
-        pathname: '/counter',
-        title: 'counter'
-    },
-
-    {
         pathname: '/shop',
         title: 'shop'
     },
 
-    {
-        pathname: '/new',
-        title: 'new component'
-    },
-]
+];

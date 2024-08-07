@@ -1,32 +1,33 @@
+// ProductCard.tsx
+import React from 'react';
 import styles from './productCard.module.css';
-
-interface IProductCardProps {
-    id: number,
-    title: string,
-    price: number,
-    description: string,
-    category: string,
-    image: string,
-    rating?: {
-        rate: number,
-        count: number
-    }
+import MyButton from '../myButton/MyButton';
+import { Link } from 'react-router-dom';
+interface Product {
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  image: string;
 }
-
-function truncateText(text: string, maxLength: number) {
-    return text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
+interface ProductCardProps {
+  product: Product;
 }
-
-function ProductCard({id, title, price, description, category, image}: IProductCardProps) {
-    return (
-        <div className={styles.productCard}>
-            <img src={image} alt={title} />
-            <h4>{truncateText(title, 20)}</h4>
-            <p className={styles.price}>${price.toFixed(2)}</p>
-            <p className={styles.description}>{truncateText(description, 40)}</p>
-            <p className={styles.category}>{category}</p>
-        </div>
-    );
+export default function ProductCard({ product }: ProductCardProps) {
+  return (
+    <div className={styles.card}>
+        <div className={styles.imgWrapper}>
+      <img src={product.image} alt={product.title} className={styles.image} />
+      </div>
+      <div className={styles.titleWrapper}>
+      <h3 className={styles.title}>{product.title}</h3>
+      </div>
+      <p className={styles.price}>${product.price.toFixed(2)}</p>
+      <div className={styles.descriptionWrapper}>
+      <p className={styles.description}>{product.description}</p>
+      </div>
+      <Link to={String(product?.id)}><MyButton name='about product' type={'button'} /></Link>
+    </div>
+  );
 }
-
-export default ProductCard;
